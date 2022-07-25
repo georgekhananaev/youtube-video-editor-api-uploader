@@ -42,7 +42,7 @@ But it depents on how much time it will require. If you need my help, you can co
 ## Limitations
 By default your app will be restricted to 10000 quotas a day. It takes 1600 quotas for a single video. Which means you can upload just 6 videos a day.
 You can't post videos as "public" direclty by API. Which means once video is uploaded, you must log into your youtube account and then change the status to "public" if you want to publish it. Otherwise it will stay private to you.
-#### To lift these limitations above, you must do audit with google. 
+#### To lift these limitations above, you must do audit with google, url: https://support.google.com/code/contact/oauth_quota_increase
 You can bypass 2nd limitation by creating a script with Selenium. (I won't help with this, find yourself)
 You can upload more than 6 videos a day, if you upload simultanity from different apps(projects). However YouTube might consider this as a spam. I suggest you read the policy first.
 
