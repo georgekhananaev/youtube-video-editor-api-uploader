@@ -1,3 +1,5 @@
+![alt text](http://repository-images.githubusercontent.com/517701519/7cdc085e-f750-475d-8278-0740cf11a8aa)
+
 # Python YouTube Video Editor + API Uploader
 This Python3 code allows you to add intro + outro + logo + upload complete video, including all video details to YouTube by single click.
 
