@@ -6,7 +6,7 @@ This Python3 code allows you to add intro + outro + logo + upload complete video
 ## What exactly is this script doing?
 It calls two main functions Video Editor and then Video Uploader.  
 <br/> 
-Note: you can disable editor or uploader in case you want to use just single function in start_process(), simple add "#" before the call row.
+Note: you can disable editor or uploader in case you want to use just single function in start_process(), simply add "#" before the call row.
 
 ### Here is complete steps:
 #### Video Editor
@@ -35,15 +35,13 @@ Note: All file locations, directories, video details can be edited in videoDetai
 
 ## Can you help me? I want to integrate it into my project?
 #### Short answer, yes. 
-But it depents on how much time it will require. If you need my help, you can contact me on linkdin (check my profile).
-
-
+But it depents on how much time it will require. If you need my help, you can contact me on linkdin: https://www.linkedin.com/in/georgekhananaev/
 
 ## Limitations
-By default your app will be restricted to 10000 quotas a day. It takes 1600 quotas for a single video. Which means you can upload just 6 videos a day.
-You can't post videos as "public" direclty by API. Which means once video is uploaded, you must log into your youtube account and then change the status to "public" if you want to publish it. Otherwise it will stay private to you.
-#### To lift these limitations above, you must do audit with google, url: https://support.google.com/code/contact/oauth_quota_increase
+By default your app will be restricted to 10000 quotas a day. It takes 1600 quotas to upload a single video. Which means you can upload just 6 videos a day.
+You can't post videos as "public" direclty by API. Which means once video is uploaded, you must log into your youtube account and then change the status to "public" manually, if you want to publish it. Otherwise it will stay private to you.
+#### To lift these limitations as shown above, you must do audit with google, url: https://support.google.com/code/contact/oauth_quota_increase
 You can bypass 2nd limitation by creating a script with Selenium. (I won't help with this, find yourself)
 You can upload more than 6 videos a day, if you upload simultanity from different apps(projects). However YouTube might consider this as a spam. I suggest you read the policy first.
 
-#### This project has absolutly no warranty. Do not use it to create spam. Do not use it for any illegal activity. Follow terms and policy of YouTube.
+#### This project has absolutly no warranty. Do not use it to create spam. Do not use it for any illegal activities. Please follow all terms and policy of YouTube otherwise they might do issues to other people that using API.
