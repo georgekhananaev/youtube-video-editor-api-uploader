@@ -2,8 +2,7 @@
 This Python3 code allows you to add intro + outro + logo + upload complete video, including all video details to youtube by single click.
 
 ## What exactly is this script doing?
-It calls two main functions Video Editor and then Video Uploader.
-Note: You can disable editor or uploader in case you want to use just single function in start_process().
+It calls two main functions Video Editor and then Video Uploader.  Note: You can disable editor or uploader in case you want to use just single function in start_process().
 
 #### Here is complete steps
 Video Editor
