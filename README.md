@@ -40,6 +40,8 @@ But it depents on how much time it will require. If you need my help, you can co
 
 
 ## Limitations
-Your API account will be restricted to 10000 quotas a day. It takes 1600 quotas for single video. Which means you can upload just 6 videos a day only for single app.
-You can't post videos as public direclty by API. Which means once video is uploaded, you must log into your youtube account and then change the status to public manually if you want to publish it.
-#### To lift these limitations, you must do audit with google.
+Your API account will be restricted to 10000 quotas a day. It takes 1600 quotas for a single video. Which means you can upload just 6 videos a day, for single app.
+You can't post videos as public direclty by API. Which means once video is uploaded, you must log into your youtube account and then change the status to public or if you want to publish it.
+#### To lift these limitations, you must do audit with google. 
+You can bypass 2nd limitation by creating a script with Selenium.
+You can upload more than 6 videos, if you upload simultanity from different Apps. However YouTube might consider this as a spam. Be careful. 
