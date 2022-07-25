@@ -29,4 +29,4 @@ Video Uploader
 Note: All file locations, directories, video details can be edited in videoDetails.py, I added sample files but please don't use these for production beyong testings.
 
 ## Can you help me? I want to integrate it into my project?
-Short answer, yes. But it depents on how much time it will require. If you need my help, you can contact me at linkdin.
+Short answer, yes. But it depents on how much time it will require. If you need my help, you can contact me at linkdin (check my profile).
