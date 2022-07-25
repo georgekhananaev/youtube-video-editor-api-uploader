@@ -17,7 +17,7 @@ Video Editor
 Video Uploader
 1.  Uploading Video
 2.  Adding Title
-3.  Adding Complete Description + Urls any info you desire
+3.  Adding Complete Description + urls + emojis + tags + any info you desire
 4.  Adding tags
 5.  Video will be "Private", edit status manually once uploaded. Note: you can't upload with API as public. Unless you pass audit with google
 6.  Uploading thumbnail photo (YouTube account must be confirmed)
