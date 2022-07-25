@@ -26,4 +26,4 @@ Video Uploader
 2. Download client_secrets.json file from google, place it in the root folder.
 3. Run main.py
 <br/>
-Note: All file locations, directories, video details can be edited in videoDetails.py
+Note: All file locations, directories, video details can be edited in videoDetails.py, I added sample files but please don't use these for production beyong testings.
