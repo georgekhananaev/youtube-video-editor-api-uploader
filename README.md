@@ -23,7 +23,7 @@ Video Uploader
 
 ## How to use?
 1. Use Python 3.10 or newer
-2. Install dependies, maybe moviepy will require to install imagemagick (https://imagemagick.org/script/download.php).
+2. Install all python packages, maybe moviepy will require to install imagemagick (https://imagemagick.org/script/download.php).
 3. Create YouTube App at: https://console.cloud.google.com, I will upload complete video tutorial soon.
 4. Download client secrets file from google, rename it as "client_secrets.json" place it in the root folder.
 5. Run main.py
