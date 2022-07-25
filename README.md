@@ -44,4 +44,4 @@ You can't post videos as "public" direclty by API. Which means once video is upl
 You can bypass 2nd limitation by creating a script with Selenium. (I won't help with this, find yourself)
 You can upload more than 6 videos a day, if you upload simultanity from different apps(projects). However YouTube might consider this as a spam. I suggest you read the policy first.
 
-#### This project has absolutly no warranty. Do not use it to create spam. Do not use it for any illegal activities. Please follow all terms and policy of YouTube otherwise they might do issues to other people that using API.
+#### This project has absolutly no warranty. Do not use it to create spam. Do not use it for any illegal activities. Please follow YouTube terms and policy.
