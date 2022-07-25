@@ -40,8 +40,10 @@ But it depents on how much time it will require. If you need my help, you can co
 
 
 ## Limitations
-Your API account will be restricted to 10000 quotas a day. It takes 1600 quotas for a single video. Which means you can upload just 6 videos a day, for single app.
-You can't post videos as public direclty by API. Which means once video is uploaded, you must log into your youtube account and then change the status to public or if you want to publish it.
+Your API account will be restricted to 10000 quotas a day. It takes 1600 quotas for a single video. Which means you can upload just 6 videos a day, for a single app.
+You can't post videos as "public" direclty by API. Which means once video is uploaded, you must log into your youtube account and then change the status to "public" or if you want to publish it otherwise it will stay private to you.
 #### To lift these limitations, you must do audit with google. 
 You can bypass 2nd limitation by creating a script with Selenium. (I won't help with this, find yourself)
-You can upload more than 6 videos, if you upload simultanity from different apps(projects). However YouTube might consider this as a spam. I suggest you read the policy first.
+You can upload more than 6 videos a day, if you upload simultanity from different apps(projects). However YouTube might consider this as a spam. I suggest you read the policy first.
+
+#### This project has absolutly no warranty. Do not use it to create spam, do not use it for any illegal activity. Follow terms and policy of YouTube.
