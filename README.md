@@ -26,7 +26,7 @@ Note: you can disable editor or uploader in case you want to use just single fun
 ## How to use?
 1. Use Python 3.10 or newer
 2. Install all python packages (in case of an issue, see my requirements.txt, install equal versions), maybe moviepy will require to install imagemagick (https://imagemagick.org/script/download.php), I originally wrote this code for much larger project and can't remember if it was required for the logo editing.
-3. Create clould project, install Youtube API V3.0. Can do it at: https://console.cloud.google.com, I will upload complete video tutorial soon.
+3. Create clould project, install YouTube Data API v3. Can do it at: https://console.cloud.google.com, I will upload complete video tutorial soon.
 4. Download client secrets file from google, rename it as "client_secrets.json" place it in the root folder.
 5. Run main.py
 6. Browser will be opened automaticlly. You will be aksed to approve the app by signing into your youtube account. Once approved, credentials will be saved to credentials.json, this is temporary file in the root folder. This is 1 time process basiclly and you won't be asked again. Unless your credentials expired or you want to change the youtube account, if so then simply remove the credentials.json file and re-do the approval.
