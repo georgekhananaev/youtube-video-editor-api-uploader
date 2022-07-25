@@ -10,9 +10,9 @@ Note: you can disable editor or uploader in case you want to use just single fun
 
 #### Here is complete steps:
 Video Editor
-1.  Adding intro clip (replace with your own file)
+1.  Adding intro clip (replace intro.mp4 with your own file)
 2.  Adding logo (any gif file or edit the code for png, jpg formats)
-3.  Adding outtro clip (replace with your own file)
+3.  Adding outtro clip (replace outtro.mp4 with your own file)
 
 Video Uploader
 1.  Uploading Video (uploading edited file)
