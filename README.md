@@ -1,5 +1,5 @@
 # Python YouTube Video Editor + API Uploader
-This Python3 code allows you to add intro + outro + logo + upload complete video, including all video details to youtube by single click.
+This Python3 code allows you to add intro + outro + logo + upload complete video, including all video details to YouTube by single click.
 
 ## What exactly is this script doing?
 It calls two main functions Video Editor and then Video Uploader.  
