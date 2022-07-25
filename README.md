@@ -23,7 +23,7 @@ Video Uploader
 
 ## How to use?
 1. Create YouTube App at: https://console.cloud.google.com, I will upload complete video tutorial soon.
-2. Download client_secrets.json file from google, place it in the root folder.
+2. Download client secrets file from google, rename it as "client_secrets.json" place it in the root folder.
 3. Run main.py
 <br/>
 Note: All file locations, directories, video details can be edited in videoDetails.py, I added sample files but please don't use these for production beyong testings.
