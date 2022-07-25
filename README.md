@@ -10,12 +10,12 @@ Note: you can disable editor or uploader in case you want to use just single fun
 
 #### Here is complete steps:
 Video Editor
-1.  Adding intro clip
-2.  Adding logo
-3.  Adding outtro clip
+1.  Adding intro clip (replace with your own file)
+2.  Adding logo (any gif file or edit the code for png, jpg format)
+3.  Adding outtro clip (replace with your own file)
 
 Video Uploader
-1.  Uploading Video
+1.  Uploading Video (uploading edited file)
 2.  Adding Title
 3.  Adding Complete Description + urls + emojis + tags + any info you desire
 4.  Adding tags
