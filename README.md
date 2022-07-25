@@ -35,4 +35,4 @@ Note: All file locations, directories, video details can be edited in videoDetai
 
 ## Can you help me? I want to integrate it into my project?
 #### Short answer, yes. 
-But it depents on how much time it will require. If you need my help, you can contact me at linkdin (check my profile).
+But it depents on how much time it will require. If you need my help, you can contact me on linkdin (check my profile).
