@@ -8,13 +8,13 @@ It calls two main functions Video Editor and then Video Uploader.
 <br/> 
 Note: you can disable editor or uploader in case you want to use just single function in start_process(), simple add "#" before the call row.
 
-#### Here is complete steps:
-Video Editor
+### Here is complete steps:
+#### Video Editor
 1.  Adding intro clip (replace intro.mp4 with your own file)
 2.  Adding logo (any gif file or edit the code for png, jpg formats)
 3.  Adding outro clip (replace outro.mp4 with your own file)
 
-Video Uploader
+#### Video Uploader
 1.  Uploading Video (uploading edited file)
 2.  Adding Title
 3.  Adding Complete Description + urls + emojis + tags + any info you desire
