@@ -22,9 +22,11 @@ Video Uploader
 
 
 ## How to use?
-1. Create YouTube App at: https://console.cloud.google.com, I will upload complete video tutorial soon.
-2. Download client secrets file from google, rename it as "client_secrets.json" place it in the root folder.
-3. Run main.py
+1. Use Python 3.10 or newer
+2. Install dependies, maybe moviepy will require to install imagemagick (https://imagemagick.org/script/download.php).
+3. Create YouTube App at: https://console.cloud.google.com, I will upload complete video tutorial soon.
+4. Download client secrets file from google, rename it as "client_secrets.json" place it in the root folder.
+5. Run main.py
 <br/>
 Note: All file locations, directories, video details can be edited in videoDetails.py, I added sample files but please don't use these for production beyong testings.
 
