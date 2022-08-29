@@ -1,7 +1,3 @@
-# keys
-credentials.json
-your_client_secrets.json
-
 # final video file
 Media/Video/final_clip/your_video_edited.mp4
 
@@ -134,3 +130,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# local keys
+your_client_secrets.json
+credentials.json
+Media/Video/final_clip/your_video_edited.mp4
+your_video_editedTEMP_MPY_wvf_snd.mp3

@@ -208,4 +208,3 @@ def start_process():
 
 # calling the start function
 start_process()
-g
