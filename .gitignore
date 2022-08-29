@@ -1,6 +1,6 @@
 # keys
-*credentials*
-*client_secrets*
+credentials.json
+your_client_secrets.json
 
 # final video file
 /Media/Video/final_clip/your_video_edited.mp4
