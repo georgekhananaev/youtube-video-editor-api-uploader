@@ -1,8 +1,8 @@
 # myconfig.py:
 import os
-from googleapiclient.http import MediaFileUpload
+from googleapiclient.http import MediaFileUpload  # noqa
 
-YOUR_CLIENT_SECRETS_FILE = './client_secrets.json' # YOUR CLIENT SECRET, Download it from https://console.cloud.google.com
+YOUR_CLIENT_SECRETS_FILE = './client_secrets.json'  # YOUR CLIENT SECRET, Download it from https://console.cloud.google.com
 
 
 class YourEditor:
@@ -41,12 +41,12 @@ It will be the rows structure too.
         for file in os.listdir(YourEditor.youtube_video_patch):
             if type == "video" and file.split(".", 1)[1] != "jpg":
                 return file
-                break
+                break  # noqa
             elif type == "thumbnail" and file.split(".", 1)[1] != "mp4":
                 return file
-                break
+                break  # noqa
 
-    def insertThumbnail(self, youtube, videoId):
+    def insertThumbnail(self, youtube, videoId):  # noqa
         thumnailPath = YourEditor.youtube_video_patch + "/%s" % (self.getFileName("thumbnail"))
 
         request = youtube.thumbnails().set(
