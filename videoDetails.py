@@ -6,12 +6,13 @@ YOUR_CLIENT_SECRETS_FILE = './client_secrets.json'  # YOUR CLIENT SECRET, Downlo
 
 
 class YourEditor:
-    fps = 60  # maximum frame peer second, final output video. change to whatever value to desire. the higher rate, the longer it takes to process the video.
 
+    # Default values (some will be overwritten by the Gui)
+    fps = 60  # maximum frame peer second, final output video. change to whatever value to desire. the higher rate, the longer it takes to process the video.
     # Static directories
-    raw_video_file = str('./Media/Video/your_video.mp4')  # your raw video file
-    video_file_out = str(
-        './Media/Video/final_clip/your_video_edited.mp4')  # final result, just before uploading to your YouTube channel.
+    raw_video_file = str('./Media/Video/your_video.mp4')   # your raw video file
+    thumbnail_image = str('./Media/Video/sample_thumbnail.jpg')  # your YouTube thumbnail image
+    video_file_out = str('./Media/Video/final_clip/your_video_edited.mp4')  # final result, just before uploading to your YouTube channel.
     video_dir = str('./Media/Video/')  # Final video output directory
     intro_file_location = str('./Media/Video/intro.mp4')  # intro clip
     outro_file_location = str('./Media/Video/outro.mp4')  # outro clip

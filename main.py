@@ -16,7 +16,64 @@ from oauth2client.file import Storage
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 from termcolor import colored
+import threading
+import PySimpleGUI as Gui
+
 import videoDetails  # local file
+
+# GUI visual structure interface
+Gui.theme('SystemDefault')  # window theme
+Gui.set_options(font=("Copper", 11))  # default font
+
+THREAD_EVENT = '-THREAD-'
+uploader_account = ['account one', 'account two']
+
+
+class Tooltips:
+    # gui selections / tooltips
+    secret_key = 'Place your Google Cloud API key/keys in the folder: your_patch/secret_keys'
+    thumbnail = 'Select thumbnail image for YouTube. Can leave empty if you want YouTube generate it automatically'
+    main_clip = 'Your main video clip, should be .mp4 format. Other formats was never tested.'
+    intro_clip = 'Your into clip, at the begging of the video.'
+    outro_clip = 'Your outro clip at the end, such as like subscribe'
+
+
+selection_layout = [[Gui.Text('Google Secret Key:', tooltip=Tooltips.secret_key),
+                     Gui.Combo(uploader_account, tooltip=Tooltips.secret_key, default_value=uploader_account[0],
+                               key='board',
+                               size=(50, 1))],
+                    [Gui.Text('Thumnail (jpg,png,)',
+                              tooltip=Tooltips.thumbnail,
+                              size=(14, 1)),
+                     Gui.InputText(videoDetails.YourEditor.thumbnail_image, tooltip=Tooltips.thumbnail),
+                     Gui.FileBrowse()],
+                    [Gui.Text('Main Clip (mp4)',
+                              tooltip=Tooltips.main_clip,
+                              size=(14, 1)), Gui.InputText(videoDetails.YourEditor.raw_video_file), Gui.FileBrowse()],
+                    [Gui.Text('Intro Clip (mp4)', tooltip=Tooltips.intro_clip, size=(14, 1)),
+                     Gui.InputText(videoDetails.YourEditor.intro_file_location), Gui.FileBrowse()],
+                    [Gui.Text('Outro Clip (mp4)', tooltip=Tooltips.outro_clip,
+                              size=(14, 1)),
+                     Gui.InputText(videoDetails.YourEditor.outro_file_location), Gui.FileBrowse()],
+                    ]
+
+buttons_layout = [  # second position argument for button type, cannot use 'center'
+    [Gui.Button('Start'), Gui.Button('Clean log', key='Clean'), Gui.Cancel()],
+]
+
+layout = [[Gui.Column(selection_layout, element_justification='left', expand_x=True)],
+          [Gui.Multiline('  ', size=(75, 10), background_color='black', text_color='White', pad=(5, 5), key='-Main-',
+                         autoscroll=True,
+                         reroute_stdout=True, write_only=True, )],
+          [Gui.Checkbox('Upload to YouTube?', default=True)],
+          [Gui.Text('Next cycle timer, shown here.', size=(25, 2), text_color='Blue', pad=(15, 22), key='-Timing-'),
+           Gui.Column(buttons_layout, element_justification='right', expand_x=True)]]
+
+# [Gui.Text('Source for Folders', size=(15, 1)), Gui.InputText(), Gui.FolderBrowse()]
+
+# layout = [[Gui.Text('Source for Folders', size=(15, 1)), [Gui.Checkbox('Upload', default=False), Gui.Checkbox('Upload to YouTube?')], Gui.InputText(), Gui.FolderBrowse()], Gui.Text('  ', size=(15, 3), key='Timing')], [Gui.Button('Start'), Gui.Button('Cancel')]
+window = Gui.Window(f'Youtube Video Editor API Uploader V2.0, by George Khananaev', layout, size=(600, 460),
+                    margins=(5, 5), icon=r'../Media/Images/aliexpress.ico', finalize=True)
 
 # this value overwrites myconfig file. disable if you don't need
 # excel_file_location = r'../Media/Data/af_output_ids2.xlsx'
@@ -38,7 +95,7 @@ RETRIABLE_EXCEPTIONS = (httplib2.HttpLib2Error, IOError, http.client.NotConnecte
 # codes is raised.
 RETRIABLE_STATUS_CODES = [500, 502, 503, 504]
 
-CLIENT_SECRETS_FILE = './your_client_secrets.json'
+CLIENT_SECRETS_FILE = './secret_keys/your_client_secrets.json'
 
 SCOPES = ['https://www.googleapis.com/auth/youtube.upload']
 API_SERVICE_NAME = 'youtube'
@@ -48,7 +105,7 @@ VALID_PRIVACY_STATUSES = ('public', 'private', 'unlisted')
 
 
 def get_authenticated_service():  # Modified
-    credential_path = os.path.join('./', 'credentials.json')
+    credential_path = os.path.join('./secret_keys/credentials/', 'credentials.json')
     store = Storage(credential_path)
     credentials = store.get()
     if not credentials or credentials.invalid:
@@ -58,9 +115,9 @@ def get_authenticated_service():  # Modified
 
 
 # remove duplicates words in variable
-def unique_list(values):
+def unique_list(your_values):
     ulist = []
-    [ulist.append(x) for x in values if x not in ulist]
+    [ulist.append(x) for x in your_values if x not in ulist]
     return ulist
 
 
@@ -207,4 +264,32 @@ def start_process():
 
 
 # calling the start function
-start_process()
+# start_process()
+
+# GUI, functional loop
+while True:
+    event, values = window.read()
+    start = window['Start']
+    # folder_path, file_path = values[0], values[1]
+    # check_box = values[2], values[3]
+    if event == 'Cancel' or event is None:
+        break
+    elif event == 'Start':
+
+        print(values)
+        # if '  ' == values[0]:
+        #     print('''  The file ids can't be empty''')
+        # else:
+        #     start.update(disabled=True)
+        #     window['Delete'].update(disabled=True)
+        #     threading.Thread(target=start_process, daemon=False).start()
+        # print(create_temporary_upload_directory)
+        # print(values[2])
+    elif event == 'Delete':
+        print('All temporary files deleted.')
+    elif event == 'Clean':
+        window.FindElement('-Main-').Update('')
+    elif event == 'End':
+        start.update(disabled=False)
+
+window.close()
