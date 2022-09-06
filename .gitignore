@@ -135,5 +135,8 @@ dmypy.json
 # local keys
 your_client_secrets.json
 credentials.json
+secret/credentials/*
+secret/keys/*
 Media/Video/final_clip/your_video_edited.mp4
 your_video_editedTEMP_MPY_wvf_snd.mp3
+test.py
