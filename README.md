@@ -1,18 +1,18 @@
 
 
-# Python3 Video Editor + YouTube API Uploader
+# Video Editor + YouTube API Uploader (Python3)
 * Python3 based. 
 * Combining main clip, intro clip + outro clip + logo into a single video file and saving it.
 * Uploading to YouTube automatically the file with all pre-set details such as: title, description, keywords, thumbnail, etc...
 * Made to save time, you can run the app multiple times simultaneity and uploading videos to different channels.
 
 #### Video Uploader functions:
-1.  Uploading Video (edited file)
-2.  Adding Title
-3.  Adding Complete Description + urls + emojis + tags + any info you desire all languages supported.
-4.  Adding YouTube tags
-5.  Video will be "Private", can edit status manually once uploaded. Note: you can't upload with API as public=unless you pass the audit with Google.
-6.  Uploading thumbnail photo (To make this feature work, your YouTube account must be confirmed)
+* Uploading Video (edited file)
+* Adding Title
+* Adding Complete Description + urls + emojis + tags + any info you desire all languages supported.
+* Adding YouTube tags
+* Video will be "Private", can edit status manually once uploaded. Note: you can't upload with API as public=unless you pass the audit with Google.
+* Uploading thumbnail photo (To make this feature work, your YouTube account must be confirmed)
 
 ## SCREENSHOT Version 2.x.x (GUI Interface)
 
