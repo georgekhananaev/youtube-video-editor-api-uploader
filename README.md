@@ -13,17 +13,6 @@
 ## Version 1.x.x (Script only)
 ![alt text](https://raw.githubusercontent.com/Fixitpanda/youtube-video-editor-api-uploader/main/screenshorts/ver1.x.png)
 
-## What exactly is this script doing?
-It calls two main functions Video Editor and then Video Uploader.  
-<br/> 
-Note: you can disable editor or uploader in case you want to use just single function in start_process(), simply add "#" before the call row.
-
-### Here is complete steps:
-#### Video Editor
-1.  Adding intro clip (replace intro.mp4 with your own file)
-2.  Adding logo (any gif file or edit the code for png, jpg formats)
-3.  Adding outro clip (replace outro.mp4 with your own file)
-
 #### Video Uploader
 1.  Uploading Video (uploading edited file)
 2.  Adding Title
