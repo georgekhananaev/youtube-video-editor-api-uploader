@@ -6,21 +6,20 @@
 * Uploading to YouTube automatically the file with all pre-set details such as: title, description, keywords, thumbnail, etc...
 * Made to save time, you can run the app multiple times simultaneity and uploading videos to different channels.
 
+#### Video Uploader functions:
+1.  Uploading Video (edited file)
+2.  Adding Title
+3.  Adding Complete Description + urls + emojis + tags + any info you desire all languages supported.
+4.  Adding YouTube tags
+5.  Video will be "Private", can edit status manually once uploaded. Note: you can't upload with API as public=unless you pass the audit with Google.
+6.  Uploading thumbnail photo (To make this feature work, your YouTube account must be confirmed)
+
 ## Version 2.x.x (GUI Interface)
 
 ![alt text](https://raw.githubusercontent.com/Fixitpanda/youtube-video-editor-api-uploader/main/screenshorts/ver2.x.png)
 
 ## Version 1.x.x (Script only)
 ![alt text](https://raw.githubusercontent.com/Fixitpanda/youtube-video-editor-api-uploader/main/screenshorts/ver1.x.png)
-
-#### Video Uploader
-1.  Uploading Video (uploading edited file)
-2.  Adding Title
-3.  Adding Complete Description + urls + emojis + tags + any info you desire
-4.  Adding tags
-5.  Video will be "Private", edit status manually once uploaded. Note: you can't upload with API as public. Unless you pass audit with Google
-6.  Uploading thumbnail photo (YouTube account must be confirmed)
-
 
 ## How to use?
 1. Download and install Python 3.10 or newer if you don't have.
