@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import os
 import glob
 import http.client
 import multiprocessing
@@ -10,7 +11,6 @@ import moviepy.editor as mpe
 from googleapiclient.discovery import build  # noqa
 from googleapiclient.errors import HttpError  # noqa
 from googleapiclient.http import MediaFileUpload  # noqa
-from moviepy.editor import *
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
@@ -39,6 +39,11 @@ class Tooltips:
     outro_clip = 'Your outro clip at the end, such as like subscribe'
 
 
+class Messages:
+    not_uploaded = '''Your video won't be uploaded to YouTube.'''
+    file_saved = 'Your file is saved.'
+
+
 # clean time output
 def sec_to_hours(seconds):
     a = str(seconds // 3600)
@@ -56,7 +61,7 @@ def gui_items():
 
     selection_layout = [[Gui.Text('Google Secret Key:', tooltip=Tooltips.secret_key),
                          Gui.Combo(get_secret_keys()[0], tooltip=Tooltips.secret_key,
-                                   default_value=get_secret_keys()[0], key='-Secret_key-', size=(50, 1))],
+                                   default_value=get_secret_keys()[0][0], key='-Secret_key-', size=(50, 1))],
                         [Gui.Text('Thumnail (jpg,png,)', tooltip=Tooltips.thumbnail, size=(14, 1)),
                          Gui.InputText(videoDetails.YourEditor.thumbnail_image, tooltip=Tooltips.thumbnail),
                          Gui.FileBrowse()],
@@ -254,7 +259,7 @@ while True:
                 .margin(right=8, top=8, opacity=0.0)  # (optional) logo-border padding
                 .set_pos(("right",
                           "bottom")))  # change location of the logo here, simply type, use: "left, right, top, bottom" as values.
-        looped_logo = vfx.loop(logo)  # noqa
+        looped_logo = mpe.vfx.loop(logo)  # noqa
 
         intro_resized = mpe.CompositeVideoClip([black_background, intro_clip.set_position("center")]).set_duration(
             intro_clip.duration)
@@ -262,7 +267,7 @@ while True:
             outro_clip.duration)
         final = mpe.CompositeVideoClip([video, looped_logo]).set_duration(
             video.duration)
-        done = concatenate_videoclips([intro_resized, final, outro_resized])
+        done = mpe.concatenate_videoclips([intro_resized, final, outro_resized])
         done.subclip(0, done.duration).write_videofile(video_file_out, fps=60,
                                                        threads=multiprocessing.cpu_count(),
                                                        codec='libx264')
@@ -273,7 +278,7 @@ while True:
     def start_process():
         moviepy_video_editor(videoDetails.YourEditor.raw_video_file, videoDetails.YourEditor.video_file_out,
                              videoDetails.YourEditor.logo_file)  # video editor
-        initialize_upload(youtube, args)  # youtube uploader
+        initialize_upload(youtube, args) if values[4] else print(Messages.file_saved, Messages.not_uploaded)
         grab_time_end = time.time()  # getting end time
         total_time = grab_time_end - grab_time_start  # calculating how many seconds it took
         completed_text = 'Completed in ', 'yellow'  # output text + color
@@ -285,7 +290,7 @@ while True:
     if event == 'Cancel' or event is None:
         break
     elif event == 'Start':
-        youtube = get_authenticated_service()
+        youtube = get_authenticated_service() if values[4] else gui_window['-Main-'].Update(Messages.not_uploaded)
         start.update(disabled=True)
         gui_window['Connect'].update(disabled=True)
         threading.Thread(target=very_simple_timer, daemon=False).start()
@@ -293,7 +298,6 @@ while True:
 
     elif event == 'Connect':
         youtube = get_authenticated_service()
-
     elif event == 'Delete':
         print('All temporary files deleted.')
     elif event == 'Clean':

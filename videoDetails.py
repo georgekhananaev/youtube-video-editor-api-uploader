@@ -1,5 +1,3 @@
-# myconfig.py:
-import os
 from googleapiclient.http import MediaFileUpload  # noqa
 
 
@@ -23,6 +21,7 @@ class YourEditor:
 class Video:
     static_description = """
 This is a test description.
+
 You can insert here whatever you want.
 It will be displayed exactly the same way on YouTube.
 It will be the rows structure too.
