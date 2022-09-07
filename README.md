@@ -14,11 +14,11 @@
 5.  Video will be "Private", can edit status manually once uploaded. Note: you can't upload with API as public=unless you pass the audit with Google.
 6.  Uploading thumbnail photo (To make this feature work, your YouTube account must be confirmed)
 
-## Version 2.x.x (GUI Interface)
+## SCREENSHOT Version 2.x.x (GUI Interface)
 
 ![alt text](https://raw.githubusercontent.com/Fixitpanda/youtube-video-editor-api-uploader/main/screenshorts/ver2.x.png)
 
-## Version 1.x.x (Script only)
+## SCREENSHOT Version 1.x.x (Script only)
 ![alt text](https://raw.githubusercontent.com/Fixitpanda/youtube-video-editor-api-uploader/main/screenshorts/ver1.x.png)
 
 ## How to use?
