@@ -6,32 +6,20 @@
 * Uploading to YouTube automatically the file with all pre-set details such as: title, description, keywords, thumbnail, etc...
 * Made to save time, you can run the app multiple times simultaneity and uploading videos to different channels.
 
-## Version 2.x.x (GUI Interface)
+#### Video Uploader functions:
+1.  Uploading Video (edited file)
+2.  Adding Title
+3.  Adding Complete Description + urls + emojis + tags + any info you desire all languages supported.
+4.  Adding YouTube tags
+5.  Video will be "Private", can edit status manually once uploaded. Note: you can't upload with API as public=unless you pass the audit with Google.
+6.  Uploading thumbnail photo (To make this feature work, your YouTube account must be confirmed)
+
+## SCREENSHOT Version 2.x.x (GUI Interface)
 
 ![alt text](https://raw.githubusercontent.com/Fixitpanda/youtube-video-editor-api-uploader/main/screenshorts/ver2.x.png)
 
-## Version 1.x.x (Script only)
+## SCREENSHOT Version 1.x.x (Script only)
 ![alt text](https://raw.githubusercontent.com/Fixitpanda/youtube-video-editor-api-uploader/main/screenshorts/ver1.x.png)
-
-## What exactly is this script doing?
-It calls two main functions Video Editor and then Video Uploader.  
-<br/> 
-Note: you can disable editor or uploader in case you want to use just single function in start_process(), simply add "#" before the call row.
-
-### Here is complete steps:
-#### Video Editor
-1.  Adding intro clip (replace intro.mp4 with your own file)
-2.  Adding logo (any gif file or edit the code for png, jpg formats)
-3.  Adding outro clip (replace outro.mp4 with your own file)
-
-#### Video Uploader
-1.  Uploading Video (uploading edited file)
-2.  Adding Title
-3.  Adding Complete Description + urls + emojis + tags + any info you desire
-4.  Adding tags
-5.  Video will be "Private", edit status manually once uploaded. Note: you can't upload with API as public. Unless you pass audit with Google
-6.  Uploading thumbnail photo (YouTube account must be confirmed)
-
 
 ## How to use?
 1. Download and install Python 3.10 or newer if you don't have.
