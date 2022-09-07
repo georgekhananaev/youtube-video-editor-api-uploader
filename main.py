@@ -80,7 +80,7 @@ def gui_items():
 
     # GUI final layout
     layout = [[Gui.Column(selection_layout, element_justification='left', expand_x=True)],
-              [Gui.Multiline('Hello,', size=(70, 10), background_color='black',
+              [Gui.Multiline('', size=(70, 10), background_color='black',
                              text_color='White', pad=(5, 5),
                              key='-Main-',
                              autoscroll=True,
