@@ -8,8 +8,10 @@
 
 ## Version 2.x.x (GUI Interface)
 
+![alt text](https://raw.githubusercontent.com/Fixitpanda/youtube-video-editor-api-uploader/main/screenshorts/ver2.x.png)
+
 ## Version 1.x.x (Script only)
-![alt text](http://repository-images.githubusercontent.com/517701519/e88551b1-0411-4113-8bde-beff910047a9)
+![alt text](https://raw.githubusercontent.com/Fixitpanda/youtube-video-editor-api-uploader/main/screenshorts/ver1.x.png)
 
 ## What exactly is this script doing?
 It calls two main functions Video Editor and then Video Uploader.  
